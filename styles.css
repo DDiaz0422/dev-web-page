@@ -1,4 +1,4 @@
-/* Reset some default spacing */
+/* Default spacing*/
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +8,10 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
-    padding-top: 60px; /* gives room for fixed navbar */
+    padding-top: 60px;
 }
   
-/* Header styles */
+/* Header styling */
 header {
     position: fixed;
     top: 0;
@@ -25,14 +25,13 @@ header {
     z-index: 1000;
 }
   
-/* Site title (your name or logo) */
 .site-title {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333333;
 }
   
-/* Navbar styles */
+/* Navbar styling */
 .navbar {
     list-style-type: none;
     display: flex;
@@ -49,3 +48,60 @@ header {
 .navbar li a:hover {
     color: #0077cc;
 }
+
+/* texting wrap styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ABOUT ME SECTION */
+.about-section {
+    padding: 60px 0;
+}
+  
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+  
+.about-text {
+    flex: 1;
+}
+  
+.about-image {
+    flex: 1;
+    max-width: 250px;
+}
+  
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+/* Responsive stacking behavior */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+  
+    .about-image {
+        order: -1; /* Put image ABOVE text on small screens */
+        max-width: 200px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;  
+    }
+
+    .about-text {
+        text-align: left;
+    }
+}
+  
