@@ -10,6 +10,7 @@ body {
     padding-top: 60px;
 }
   
+/* Navbar */
 header {
     position: fixed;
     top: 0;
@@ -52,38 +53,50 @@ header {
     padding: 0 20px;
 }
   
-/* About Section */
-.about-section {
-    padding: 60px 0;
+/* Section boxes */
+.section-box {
+    background-color: white;
+    padding: 40px 30px;
+    margin: 60px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
   
+/* About Section */
 .about-content {
     display: flex;
     gap: 40px;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
   
 .about-text {
     flex: 1 1 300px;
 }
   
+.about-text h1 {
+    margin-bottom: 15px;
+}
+  
 .about-image {
     flex: 1 1 200px;
     max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
   
 .about-image img {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
   
-/* Resume */
+/* Resume Preview */
 .resume-preview {
     margin-top: 30px;
 }
-  
+
 .resume-card {
     display: block;
     padding: 20px;
@@ -100,10 +113,10 @@ header {
     transform: scale(1.02);
 }
   
-/* Projects Section */
-#projects {
-    margin: 60px 0;
+/* Projects Carousel */
+#projects h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
   
 .carousel-wrapper {
@@ -111,6 +124,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    gap: 15px;
     overflow: visible;
 }
   
@@ -132,6 +146,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+}
+  
+.carousel-item.center {
+    z-index: 10;
 }
   
 .carousel-item.center .project-card {
@@ -149,7 +168,7 @@ header {
 .project-card {
     background-color: #f5f5f5;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     cursor: pointer;
     transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
@@ -187,72 +206,33 @@ header {
     opacity: 1;
 }
   
+/* Carousel Arrows */
 .carousel-arrow {
-    background: none;
-    border: none;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 2rem;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 15px;
     color: #333;
-    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
   
 .carousel-arrow:hover {
-    color: #0077cc;
+    background-color: #e4efff;
 }
   
-/* Contact */
-#contact {
-    margin-top: 80px;
+/* Contact Section */
+#contact h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
   
-#contact-form.hidden {
-    display: none;
-}
-  
-#contact-form form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-  
-#contact-form input,
-#contact-form textarea {
-    padding: 10px;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-  
-/* Responsive */
-@media (max-width: 768px) {
-    .carousel-item {
-      flex: 0 0 80%;
-      max-width: 80%;
-    }
-  
-    .carousel {
-      gap: 10px;
-    }
-  
-    .carousel-arrow {
-      font-size: 1.5rem;
-    }
-  
-    .about-content {
-      flex-direction: column;
-      align-items: center;
-    }
-}
-
 .contact-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-top: 20px;
+    margin: 30px 0 40px;
 }
   
 .contact-buttons button {
@@ -261,7 +241,7 @@ header {
     background-color: #0077cc;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
@@ -290,7 +270,7 @@ header {
     color: white;
     border: none;
     padding: 6px 12px;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
 }
   
@@ -302,4 +282,56 @@ header {
     display: none;
 }
   
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .about-text h1 {
+        text-align: center;
+    }
+  
+    .about-image {
+        margin-top: 10px;
+        order: -1;
+    }
+  
+    .carousel-wrapper {
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    .carousel {
+        flex: 1;
+        gap: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+  
+    .carousel-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+  
+    .carousel-item.center .project-card {
+        transform: scale(1.05);
+    }
+  
+    .carousel-item.side {
+        display: none;
+    }
+  
+    .project-card {
+        min-height: auto;
+    }
+  
+    #projects h2,
+    #contact h1 {
+        text-align: center;
+    }
+  }
   

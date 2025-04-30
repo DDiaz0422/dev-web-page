@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Diego Diaz Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diego Diaz Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Top bar + nav links -->
-    <header>
-        <div class="site-title">Welcome To My Website!</div>
-        <nav>
-            <ul class="navbar">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="site-title">Welcome To My Website!</div>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="container">
-        <!-- Here's the intro section where I talk about myself -->
-        <section id="about" class="about-section">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1>About Me</h1>
-                    <p>Hello! My name is Diego Diaz. I'm a Software Engineer who recently graduated from Duke University.</p>
-                    <p>I love building projects, designing, and enjoy learning new technologies!</p>
-                    <div class="resume-preview">
-                        <a href="assets/DiegoDiaz_Resume25.pdf" target="_blank" class="resume-card">
-                            <h3>Here Is My Resume</h3>
-                            <p>Click here to preview or download!</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="assets/default_profile_pic.jpg" alt="Profile picture"/>
-                </div>
-            </div>
-        </section>
+  <!-- Main Content -->
+  <main class="container">
 
-        <!-- The project section with a horizontal scroll / carousel -->
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="carousel-wrapper">
-                <button class="carousel-arrow" onclick="rotateCarousel('left')">&#8249;</button>
-                <div class="carousel" id="carousel"></div>
-                <button class="carousel-arrow" onclick="rotateCarousel('right')">&#8250;</button>
-            </div>
-        </section>
+    <!-- About Section -->
+    <section id="about" class="about-section section-box">
+      <div class="about-content">
+        <div class="about-text">
+          <h1>About Me</h1>
+          <p>Hello! My name is Diego Diaz. I'm a Software Engineer who recently graduated from Duke University.</p>
+          <p>I love building projects, designing, and enjoy learning new technologies!</p>
+          <div class="resume-preview">
+            <a href="assets/DiegoDiaz_Resume25.pdf" target="_blank" class="resume-card">
+              <h3>Here Is My Resume</h3>
+              <p>Click here to preview or download!</p>
+            </a>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="assets/default_profile_pic.jpg" alt="Profile picture"/>
+        </div>
+      </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h1>Contact Me</h1>
-            <div class="contact-buttons">
-                <button onclick="window.open('https://www.linkedin.com/in/diego-diaz-a986341b2/', '_blank')">LinkedIn</button>
-                <button id="show-email-button">Email Me</button>
-            </div>
-        
-            <!-- Email pop-up that appears when you click "Email Me" -->
-            <div id="email-popup" class="hidden">
-                <p>ddiaz042202@gmail.com</p>
-                <button onclick="copyEmail()">Copy Email</button>
-            </div>
-        </section>
-    </main>
+    <!-- Projects Section -->
+    <section id="projects" class="section-box">
+      <h2>My Projects</h2>
+      <div class="carousel-wrapper">
+        <button class="carousel-arrow" onclick="rotateCarousel('left')">&#8249;</button>
+        <div class="carousel" id="carousel"></div>
+        <button class="carousel-arrow" onclick="rotateCarousel('right')">&#8250;</button>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="section-box">
+      <h1>Contact Me</h1>
+      <div class="contact-buttons">
+        <button onclick="window.open('https://linkedin.com/in/your-profile', '_blank')">LinkedIn</button>
+        <button onclick="document.getElementById('email-popup').classList.toggle('hidden')">Email Me</button>
+      </div>
+      <div id="email-popup" class="hidden">
+        <p>diego.diaz@example.com</p>
+        <button onclick="navigator.clipboard.writeText('diego.diaz@example.com')">Copy Email</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
