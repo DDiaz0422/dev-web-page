@@ -8,9 +8,9 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
     <header>
-        <div class="site-title">Welcome!</div>
+        <div class="site-title">Welcome To My Website!</div>
         <nav>
             <ul class="navbar">
                 <li><a href="#about">About Me</a></li>
@@ -19,6 +19,7 @@
             </ul>
         </nav>
     </header>
+    <!-- Body of Website -->
     <main class="container">
         <!-- About Section -->
         <section id="about" class="about-section">
@@ -42,18 +43,33 @@
 
         <!-- Projects Section -->
         <section id="projects">
-            <h1>My Projects</h1>
-            <div class="project-scroll-container">
-                <div class="project-card">
-                    <a href="#" target="_blank">Project 1</a>
+            <h2>My Projects</h2>
+            <div class="projects-wrapper">
+                <button class="scroll-btn left" onclick="scrollProjects('left')">&#8249;</button>
+                <div class="project-scroll-container" id="projectContainer">
+                    <div class="project-card" onclick="window.open('https://your-live-site-or-github.com', '_blank')">
+                        <img src="assets/default_thumbnail.jpg" alt="Project thumbnail" class="project-thumbnail" />
+                        <div class="project-content">
+                            <h3>Project 1</h3>
+                        </div>
+                        <div class="project-description">A project will go here soon!</div>
+                    </div>
+                    <div class="project-card" onclick="window.open('https://your-live-site-or-github.com', '_blank')">
+                        <img src="assets/default_thumbnail.jpg" alt="Project thumbnail" class="project-thumbnail" />
+                        <div class="project-content">
+                            <h3>Project 2</h3>
+                        </div>
+                        <div class="project-description">This is a funny little machine learning project!</div>
+                    </div>
+                    <div class="project-card" onclick="window.open('https://your-live-site-or-github.com', '_blank')">
+                        <img src="assets/default_thumbnail.jpg" alt="Project thumbnail" class="project-thumbnail" />
+                        <div class="project-content">
+                            <h3>Project 3</h3>
+                        </div>
+                        <div class="project-description">Something useful will go here trust me!</div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <a href="#" target="_blank">Project 2</a>
-                </div>
-                <div class="project-card">
-                    <a href="#" target="_blank">Project 3</a>
-                </div>
-                <!-- Add more project cards here -->
+                <button class="scroll-btn right" onclick="scrollProjects('right')">&#8250;</button>
             </div>
         </section>
 
