@@ -100,4 +100,16 @@ function rotateCarousel(direction) {
   
 // Call this once at the start so the first projects show up
 updateCarousel();
+
+// Handle the Email reveal and copy
+document.getElementById("show-email-button").addEventListener("click", () => {
+    const popup = document.getElementById("email-popup");
+    popup.classList.toggle("hidden");
+});
   
+function copyEmail() {
+    const email = "diego.diaz@example.com";
+    navigator.clipboard.writeText(email).then(() => {
+        alert("Email copied to clipboard!");
+    });
+}
