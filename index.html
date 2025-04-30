@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diego Diaz Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diego Diaz Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Top bar + nav links -->
     <header>
         <div class="site-title">Welcome To My Website!</div>
         <nav>
@@ -19,9 +19,9 @@
             </ul>
         </nav>
     </header>
-    <!-- Body of Website -->
+
     <main class="container">
-        <!-- About Section -->
+        <!-- Here's the intro section where I talk about myself -->
         <section id="about" class="about-section">
             <div class="about-content">
                 <div class="about-text">
@@ -30,7 +30,7 @@
                     <p>I love building projects, designing, and enjoy learning new technologies!</p>
                     <div class="resume-preview">
                         <a href="assets/DiegoDiaz_Resume25.pdf" target="_blank" class="resume-card">
-                            <h3> Here Is My Resume</h3>
+                            <h3>Here Is My Resume</h3>
                             <p>Click here to preview or download!</p>
                         </a>
                     </div>
@@ -41,43 +41,20 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- The project section with a horizontal scroll / carousel -->
         <section id="projects">
             <h2>My Projects</h2>
-            <div class="projects-wrapper">
-                <button class="scroll-btn left" onclick="scrollProjects('left')">&#8249;</button>
-                <div class="project-scroll-container" id="projectContainer">
-                    <div class="project-card" onclick="window.open('https://your-live-site-or-github.com', '_blank')">
-                        <img src="assets/default_thumbnail.jpg" alt="Project thumbnail" class="project-thumbnail" />
-                        <div class="project-content">
-                            <h3>Project 1</h3>
-                        </div>
-                        <div class="project-description">A project will go here soon!</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://your-live-site-or-github.com', '_blank')">
-                        <img src="assets/default_thumbnail.jpg" alt="Project thumbnail" class="project-thumbnail" />
-                        <div class="project-content">
-                            <h3>Project 2</h3>
-                        </div>
-                        <div class="project-description">This is a funny little machine learning project!</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://your-live-site-or-github.com', '_blank')">
-                        <img src="assets/default_thumbnail.jpg" alt="Project thumbnail" class="project-thumbnail" />
-                        <div class="project-content">
-                            <h3>Project 3</h3>
-                        </div>
-                        <div class="project-description">Something useful will go here trust me!</div>
-                    </div>
-                </div>
-                <button class="scroll-btn right" onclick="scrollProjects('right')">&#8250;</button>
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow" onclick="rotateCarousel('left')">&#8249;</button>
+                <div class="carousel" id="carousel"></div>
+                <button class="carousel-arrow" onclick="rotateCarousel('right')">&#8250;</button>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Basic contact form -->
         <section id="contact">
             <h1>Contact Me</h1>
             <button id="contact-button">Open Contact Form</button>
-
             <div id="contact-form" class="hidden">
                 <form action="https://formsubmit.co/your-email@example.com" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -88,6 +65,7 @@
             </div>
         </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
