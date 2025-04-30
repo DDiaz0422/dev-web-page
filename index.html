@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="site-title">Your Name</div>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+    <!-- About Section -->
     <section id="about">
-        <h1>Welcome to My Website</h1>
-        <p>This is a place where I showcase my projects and contact info.</p>
+        <h1>About Me</h1>
+        <p>Hello! My name is Diego Diaz. I'm a Software Engineer who recently graduated from Duke University.</p>
+        <p>I love building projects, designing, and enjoy learning new technologies!</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h1>My Projects</h1>
+        <div class="project-scroll-container">
+            <div class="project-card">
+                <a href="#" target="_blank">Project 1</a>
+            </div>
+            <div class="project-card">
+                <a href="#" target="_blank">Project 2</a>
+            </div>
+            <div class="project-card">
+                <a href="#" target="_blank">Project 3</a>
+            </div>
+            <!-- Add more project cards here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <button id="contact-button">Open Contact Form</button>
+
+        <div id="contact-form" class="hidden">
+            <form action="https://formsubmit.co/your-email@example.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </section>
 
     <script src="script.js"></script>

@@ -1,20 +1,51 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default spacing */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-nav ul {
-    list-style: none;
+  
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 60px; /* gives room for fixed navbar */
+}
+  
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
     display: flex;
-    gap: 20px;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
 }
-
-nav ul li {
-    display: inline;
+  
+/* Site title (your name or logo) */
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
 }
-
-section {
-    padding: 20px;
+  
+/* Navbar styles */
+.navbar {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+  
+.navbar li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+  
+.navbar li a:hover {
+    color: #0077cc;
 }
