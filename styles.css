@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +6,14 @@
 }
   
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background-color: #f9f9f9;
     padding-top: 60px;
+
+    background-image: url('assets/Background1.svg');
+    background-repeat: repeat;
+    background-size: 2700px;
+    background-attachment: fixed;
 }
   
 /* Navbar */
@@ -15,8 +21,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #ccc;
+    background: #fcfbfa;
+    border-bottom: 1px solid #fcfbfa;
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -48,16 +54,16 @@ header {
 }
   
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
   
 /* Section boxes */
 .section-box {
-    background-color: white;
-    padding: 40px 30px;
-    margin: 60px 0;
+    background-color: #fcfbfa;
+    padding: 40px 40px;
+    margin: 40px 0;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -77,17 +83,23 @@ header {
 .about-text h1 {
     margin-bottom: 15px;
 }
+
+.about-text p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
   
 .about-image {
-    flex: 1 1 200px;
-    max-width: 250px;
+    flex: 1 1 300px;
+    max-width: 350px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
   
 .about-image img {
     width: 100%;
+    max-width: 350px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -185,7 +197,27 @@ header {
 }
   
 .project-content {
-    padding: 15px;
+    padding: 15px 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+.project-content h3 {
+    margin: 0;
+    padding: 5px 0;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.project-title {
+    margin: 0;
+    padding: 5px 0;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
 }
   
 .project-description {
@@ -238,7 +270,7 @@ header {
 .contact-buttons button {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: #0077cc;
+    background-color: #3171fc;
     color: white;
     border: none;
     border-radius: 8px;
