@@ -68,11 +68,11 @@
       <h1>Contact Me</h1>
       <div class="contact-buttons">
         <button onclick="window.open('https://www.linkedin.com/in/diego-diaz-a986341b2/', '_blank')">LinkedIn</button>
-        <button onclick="document.getElementById('email-popup').classList.toggle('hidden')">Email Me</button>
+        <button id="show-email-button">Email Me</button>
       </div>
       <div id="email-popup" class="hidden">
-        <p>ddiaz042202@gmail.com</p>
-        <button onclick="navigator.clipboard.writeText('ddiaz042202@gmail.com')">Copy Email</button>
+        <p id="email-address">ddiaz042202@gmail.com</p>
+        <button id="copy-email-button">Copy Email</button>
       </div>
     </section>
 
