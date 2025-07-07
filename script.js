@@ -107,9 +107,11 @@ document.getElementById("show-email-button").addEventListener("click", () => {
     const popup = document.getElementById("email-popup");
     popup.classList.toggle("hidden");
 });
+
+document.getElementById("copy-email-button").addEventListener("click", copyEmail);
   
 function copyEmail() {
-    const email = "diego.diaz@example.com";
+    const email = document.getElementById("email-address").textContent.trim();
     navigator.clipboard.writeText(email).then(() => {
         alert("Email copied to clipboard!");
     });
